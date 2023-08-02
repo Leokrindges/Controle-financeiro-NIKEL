@@ -63,7 +63,7 @@ document.getElementById("create-form").addEventListener("submit", function(e) {
     saveAccount({
         login: email,
         password: password,
-        trasactions: []
+        transactions: []
     });
 
     //para esconder o form usa hide

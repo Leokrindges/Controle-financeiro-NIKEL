@@ -21,13 +21,13 @@ document.getElementById("transaction-form").addEventListener("submit", function(
 
     //salva dados na lista
     data.transactions.unshift({
-        value: value, type: type, description: description, date: date
+        value: value, description: description, type: type, date: date
     });
 
     //salva no local storage
     saveData(data);
     //reseta modal
-    e.target.resert();
+    e.target.reset();
     //fecha modal
     myModal.hide();
 
@@ -56,7 +56,6 @@ function checkLogged() {
         data = JSON.parse(dataUser);
     }
 
-        console.log(data);
 }
 
 //para sair da conta
