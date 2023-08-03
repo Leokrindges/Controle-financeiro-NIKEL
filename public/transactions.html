@@ -24,7 +24,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <div class="d-flex">
+                    <div class="d-flex menu">
                         <a href="home.html"><button class="btn" type="button"><i
                                     class="bi bi-house-door-fill fs-4 "></i></button></a>
                         <a href="transactions.html"><button class="btn" type="button"><i
@@ -33,8 +33,8 @@
                         <div class="dropdown">
                             <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
                                     class="bi bi-person-circle fs-4"></i></button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Sair</a></li>
+                            <ul class="dropdown-menu logout">
+                                <li><button class="dropdown-item" id="button-logout">Sair</button></li>
                             </ul>
                         </div>
 
@@ -70,13 +70,8 @@
                                             <th scope="col">Descrição</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">08/11/2021</th>
-                                            <td>50,00</td>
-                                            <td>Saída</td>
-                                            <td>Gasolina</td>
-                                        </tr>
+                                    <tbody id="transactions-list">
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -100,7 +95,7 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="value-input" class="form-label">Valor</label>
-                                <input type="number" class="form-control" id="value-input"
+                                <input type="number" step="any" class="form-control" id="value-input"
                                     aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
@@ -137,6 +132,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+        <script src="./js/transactions.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-//pega a moda do home.html
+//pega a modal do home.html
 const myModal = new bootstrap.Modal("#transaction-modal");
 let logged = sessionStorage.getItem("logged");
 const session = localStorage.getItem("session");
@@ -42,11 +42,10 @@ document.getElementById("transaction-form").addEventListener("submit", function 
     myModal.hide();
 
     alert("Lançamento adicionado com sucesso.")
-
-
 });
 
 checkLogged();
+
 //area de login
 function checkLogged() {
     if (session) {
