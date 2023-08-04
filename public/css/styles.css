@@ -81,6 +81,33 @@ header{
     color: #ffffff;
 
 }
+.delete-button {
+    border-radius: 7px;
+    background-color: #4e0070;
+    color: #ffffff;
+    padding: 0 !important;
+    font-size: 12px;
+    height: 25px;
+    width: 45px;
+    
+}
+
+.delete-button:hover{
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #4c79d3;
+    border: 1px solid #4c79d3;
+    padding: 0 !important;
+    font-size: 12px;
+    height: 25px;
+    width: 45px;
+}
+
+.button-default:hover {
+    border: 2px solid #4c79d3;
+    background-color: #ffffff;
+    color: #4c79d3;
+}
 
 .link-default {
     color: #4e0070;
