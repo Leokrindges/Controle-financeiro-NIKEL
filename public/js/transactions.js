@@ -89,7 +89,7 @@ function getTransactions() {
                 <td>${item.value.toFixed(2)}</td>
                 <td>${type}</td>
                 <td>${item.description}</td>
-                <td><button type="button" class="btn delete-button" id="${Date.now}">Excluir</button></td>
+                <td><button type="button" class="btn delete-button" id="${Date.now()}">Excluir</button></td>
             </tr>           
             `
         })
