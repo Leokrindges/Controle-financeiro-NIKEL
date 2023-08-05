@@ -9,6 +9,8 @@ let data = {
 //quando clicar no botao de sair executa a funcao logaut para sair da conta, através de um evento de click
 document.getElementById("button-logout").addEventListener("click", logout);
 
+document.getElementById("button-logout").addEventListener("click", deleteTransaction);
+
 //ADICIONAR LANÇAMENTO
 document.getElementById("transaction-form").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -21,7 +23,7 @@ document.getElementById("transaction-form").addEventListener("submit", function 
 
     //salva dados na lista
     data.transactions.unshift({
-        value: value, description: description, type: type, date: date
+        value: value, description: description, type: type, date: date, id: Date.now()
     });
 
     //salva no local storage
@@ -89,13 +91,35 @@ function getTransactions() {
                 <td>${item.value.toFixed(2)}</td>
                 <td>${type}</td>
                 <td>${item.description}</td>
-                <td><button type="button" class="btn delete-button" id="${Date.now()}">Excluir</button></td>
+                    <td><button type="button" class="bi bi-trash3 delete-button" onclick="deleteTransaction(${item.id})"></button></td>
             </tr>           
             `
         })
     }
 
     document.getElementById("transactions-list").innerHTML = transactionHtml;
+}
+
+//remove transação
+function deleteTransaction(deleteId) {
+    debugger;
+
+    const currentList = data.transactions;
+
+    const newList = currentList.filter(function(item) {
+        if (item.id === deleteId) {
+            return false;
+        }
+        return true;
+    });
+
+    data.transactions = newList;
+
+    // salvar 
+    saveData(data);
+    
+    //lista transações
+    getTransactions()
 }
 
 //salva no local storage
